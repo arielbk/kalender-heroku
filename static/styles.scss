@@ -375,18 +375,30 @@ td.other-month {
 td.other-month a {
 	color: $grey;
 }
-.small-titles {
+// Setting coloured li tags -- inspired by https://www.w3.org/Style/Examples/007/color-bullets.en.html
+ul.small-titles {
 	margin-top: 10px;
-	background-color: $white;
-	border-radius: 7px;
+	list-style: none;
+	padding: 0;
 }
 .small-titles li {
-	list-style-type: square;
-	list-style-position: inside;
+	position: relative;
+	padding-left: 20px;
+	margin-bottom: 5px;
+	text-align: left;
 	font-size: 0.8em;
-	line-height: 1.5em;
-	color: $eerie;
 }
+.small-titles li::before {
+	content: "▪";
+	color: $white;
+	display: inline-block;
+	font-size: 30px;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	top: -10px;
+}
+
 
 // .calendar-footer {
 // 	display: block;
