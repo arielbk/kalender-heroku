@@ -2,9 +2,14 @@
 
 {% block body %}
 
+  <div class="modal-header">
+    <h2 class="datenote-date">{{day}}{% if day == 1 or day == 21 or day == 31 %}st{% elif day == 2 or day == 22 %}nd{% elif day == 3 or day == 23 %}rd{% else %}th{% endif %} {{selected_month_name}} {{year}}</h2>
+    Notes
+  </div>
+
   {% from "includes/_formhelpers.html" import render_field %}
 
-    <form action="" method="POST">
+    <form action="" method="POST" class="datenotes-form">
       <fieldset class="form-fields">
         <label for="title">
           {{ render_field(form.title, class_="form-conrol") }}
@@ -14,14 +19,10 @@
         </label>
       </fieldset>
 
-      <div class="modal-footer form-action">
-          <h2 class="datenote-date">
-            {{ day }}{% if day == 1 or day == 21 or day == 31 %}st{% elif day == 2 or day == 22 %}nd{% elif day == 3 or day == 23 %}rd{% else %}th{% endif %}
-            {{ selected_month_name }},
-            {{ year }}
-          </h2>
-          <input class="btn btn-footer" type="submit" name="submit" value="Create Note">
-      </div>
+      <fieldset class="form-action">
+          <a class="btn btn-danger" href="{{year}}-{{month}}-{{day}}">Cancel</a>
+          <input class="btn btn-create" type="submit" name="submit" value="Create Note">
+      </fieldset>
 
     </form>
 
