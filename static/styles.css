@@ -71,13 +71,13 @@ table {
 ==========================================================================*/
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #191919;
+  background-color: #eee;
   font-size: 16px;
   color: #191919;
 }
 
 body.iframe-body {
-  background-color: #ffe;
+  background-color: #eee;
   margin: 0;
   padding: 0;
 }
@@ -87,6 +87,20 @@ body.iframe-body {
                                               LAYOUT ->
 
 ==========================================================================*/
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
 .main-container {
   width: 100%;
   position: absolute;
@@ -95,16 +109,15 @@ body.iframe-body {
 
 .main-window {
   border-radius: 5px;
-  background-color: #0a3847;
+  background-color: #eee;
   min-width: 810px;
   width: 85%;
   margin: 22px auto;
-  box-shadow: 0 10px 30px #000;
 }
 
 .form-box {
   border-radius: 5px;
-  background-color: #ffe;
+  background-color: #fff;
   box-shadow: 0 10px 30px #000;
   margin: 60px auto;
 }
@@ -125,18 +138,18 @@ body.iframe-body {
 ==========================================================================*/
 h1 {
   font-size: 4em;
-  color: #0a3847;
+  color: #fff;
 }
 
 h3,
 h3 a {
   font-size: 1.7em;
-  color: #818181;
+  color: #191919;
   margin-top: 22px;
 }
 
 h3 a:hover {
-  color: #dd7975;
+  color: #0a3847;
 }
 
 strong {
@@ -149,44 +162,36 @@ strong {
 
 ==========================================================================*/
 header {
-  background-color: #eee;
-  height: 50px;
+  background-color: #0a3847;
+  height: 66px;
   width: 100%;
-}
-
-header::after {
-  content: "";
-  clear: both;
-  display: table;
 }
 
 header h2 {
   font-size: 2.2em;
   font-weight: 200;
-  color: #0a3847;
+  color: #fff;
   display: inline-block;
   float: right;
   margin-right: 7.5%;
-  margin-top: 9px;
+  margin-top: 16px;
 }
 
 header a {
-  color: #0a3847;
+  color: #fff;
 }
 
 #nav-icon {
   display: inline-block;
   margin-left: 7.5%;
-  margin-right: -69px;
-  margin-top: 12px;
+  margin-top: 24px;
   padding-bottom: 22px;
 }
 
 nav#side-nav {
-  color: #ffe;
+  color: #fff;
   width: 0;
-  background: #0c0c0c;
-  color: #gold;
+  background: #191919;
   height: 100%;
   position: fixed;
   z-index: 1;
@@ -199,7 +204,7 @@ nav#side-nav {
 }
 
 nav#side-nav a {
-  color: #ffe;
+  color: #fff;
   display: block;
   margin: 0 0 44px 44px;
   font-size: 1.3em;
@@ -222,7 +227,22 @@ nav#side-nav #nav-close {
 
 nav#side-nav #nav-close:hover,
 nav#side-nav #nav-close:focus {
-  color: #dd7975;
+  color: #c00;
+}
+
+form#date-chooser {
+  width: auto;
+  display: inline-block;
+  margin-left: 15%;
+  transition: 0.2s;
+}
+
+#date-chooser select {
+  font-size: 1.6em;
+  background: #0a3847;
+  color: #fff;
+  border-radius: 0;
+  border-color: #818181;
 }
 
 /*----------------------------------------------------------------------------/*
@@ -248,22 +268,20 @@ nav#side-nav #nav-close:focus {
 #modal-iframe {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
 }
 
 .modal-content {
-  background-color: #f4f4f4;
+  background-color: #eee;
   margin: 70px auto;
   width: 80%;
   height: 80%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.6), 0 7px 20px 0 rgba(0, 0, 0, 0.6);
   animation-name: modal-open;
   animation-duration: 1s;
-  border-radius: 5px;
 }
 
 #btn-close {
-  color: #dd7975;
+  color: #818181;
   font-size: 60px;
   position: fixed;
   top: 20px;
@@ -272,7 +290,7 @@ nav#side-nav #nav-close:focus {
 
 #btn-close:hover,
 #btn-close:focus {
-  color: #000;
+  color: #c00;
   text-decoration: none;
   cursor: pointer;
 }
@@ -292,10 +310,10 @@ thead {
 }
 
 th {
-  background: #0a3847;
+  background: #eee;
   padding: 22px;
-  color: #ffe;
-  font-weight: 100;
+  color: #1e6870;
+  font-weight: 400;
   font-size: 1.2em;
   text-align: center;
 }
@@ -315,8 +333,7 @@ td {
 }
 
 tfoot td {
-  background: #0a3847;
-  border-top: solid 1px #191919;
+  background: #eee;
   padding: 22px;
 }
 
@@ -335,6 +352,10 @@ tfoot tr:last-child td:last-child {
                                               MAIN CALENDAR ->
 
 ==========================================================================*/
+.main-calendar table {
+  padding-bottom: 108px;
+}
+
 .main-calendar td {
   width: 14%;
   text-align: center;
@@ -352,9 +373,9 @@ tfoot tr:last-child td:last-child {
 }
 
 .main-calendar td a:hover {
-  background: #98babe;
+  background: #1e6870;
   text-decoration: none;
-  color: #0a3847;
+  color: #eee;
 }
 
 .today-highlight a {
@@ -363,13 +384,16 @@ tfoot tr:last-child td:last-child {
 }
 
 td.other-month {
-  background: #c0c0c0;
+  background: #eee;
+}
+
+td.other-month a {
   color: #818181;
 }
 
 .small-titles {
   margin-top: 10px;
-  background-color: #dd7975;
+  background-color: #eee;
   border-radius: 7px;
 }
 
@@ -378,34 +402,7 @@ td.other-month {
   list-style-position: inside;
   font-size: 0.8em;
   line-height: 1.5em;
-  color: #ffe;
-}
-
-tfoot h3 {
-  color: #cca559;
-  font-size: 40px;
-  font-weight: 200;
-  margin-top: 6px;
-}
-
-h3.month-selector-other a {
-  height: 100%;
-  color: #c0c0c0;
-  font-size: 0.7em;
-  margin: 0;
-}
-
-.arrow {
   color: #191919;
-  padding: 0 12px 8px 12px;
-}
-
-h3.month-selector-other a:hover,
-h3.month-selector-other .arrow a:hover {
-  height: 100%;
-  color: #c0c0c0;
-  background-color: #0a3847;
-  border-bottom: 4px solid #c0c0c0;
 }
 
 /*----------------------------------------------------------------------------/*
@@ -442,7 +439,7 @@ input {
 }
 
 .form-fields input {
-  background: #fff;
+  background: #purewhite;
   border: 1px solid #c0c0c0;
   box-shadow: inset 1px 2px rgba(0, 0, 0, 0.1);
   color: #191919;
@@ -482,7 +479,7 @@ input {
 }
 
 .btn-delete {
-  background: #dd7975;
+  background: #c00;
 }
 
 .btn-edit {
@@ -495,43 +492,26 @@ input {
   color: #cca559;
 }
 
-form select {
-  font-size: 1.5em;
-  background: #191919;
-  color: #ffe;
-  border-radius: 0;
-  border-color: #818181;
-}
-
 /*----------------------------------------------------------------------------/*
 
                                               DATE NOTES TABLE ->
 
 ==========================================================================*/
+.modal-header {
+  color: #1e6870;
+}
+
 h2.datenote-date {
-  color: #cca559;
+  color: #eee;
   display: inline-block;
-  font-weight: 400;
+  font-weight: 200;
   font-size: 1.8em;
 }
 
-.datenote-head th {
-  border-radius: 0;
-}
-
-tr.col-filler {
-  height: 80px;
-}
-
 .datenote-table {
-  margin: 0;
+  margin-top: 80px;
   padding: 0;
   height: 100%;
-  padding-bottom: 80px;
-}
-
-.datenote-title {
-  text-align: left;
 }
 
 .datenote-description {
@@ -543,12 +523,17 @@ tr.col-filler {
   padding: 22px;
 }
 
-.modal-footer {
+.datenote-table td {
+  background-color: #eee;
+  border-bottom: 1px solid #818181;
+}
+
+.modal-header {
   position: fixed;
   width: 100%;
   height: 80px;
   background: #0a3847;
-  bottom: 0;
+  top: 0;
   left: 0;
   padding: 22px;
   border-top: solid 1px #191919;
@@ -564,13 +549,19 @@ tr.col-filler {
   float: right;
 }
 
+.notes-error {
+  font-weight: 600;
+  font-size: 1.2em;
+  color: #c00;
+}
+
 /*----------------------------------------------------------------------------/*
 
                                               ALERTS ->
 
 ==========================================================================*/
 .alert {
-  height: 120px;
+  height: 36px;
   padding: 12px;
   text-align: center;
   font-weight: 600;
@@ -578,14 +569,15 @@ tr.col-filler {
   position: absolute;
   bottom: 0;
   z-index: 0.9;
+  color: #fff;
 }
 
 .alert-danger {
-  background: #dd7975;
+  background: #c00;
 }
 
 .alert-success {
-  background: #8eff8e;
+  background: #00bc00;
 }
 
 /*# sourceMappingURL=styles.css.map */

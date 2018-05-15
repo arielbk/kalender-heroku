@@ -1,13 +1,16 @@
 // Scripts for slide out menu
 
 var sideNav = document.getElementById('side-nav');
+var dateChooser = document.getElementById('date-chooser');
 
 function openMenu() {
   sideNav.style.width = '320px';
+  dateChooser.style.marginLeft = '25%';
 }
 
 function closeMenu() {
   sideNav.style.width = '0';
+  dateChooser.style.marginLeft = '15%';
 }
 
 window.addEventListener('click', outsideClick);
