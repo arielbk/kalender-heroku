@@ -201,7 +201,7 @@ def login():
                 session['username'] = username
 
                 flash('You are now logged in', 'success')
-                return redirect(url_for('home'))
+                return redirect(url_for('back_home'))
             else:
 
                 # Did not pass
@@ -225,6 +225,11 @@ def login_required(f):
             flash('You must be logged in to access this page.', 'danger')
             return redirect(url_for('login'))
     return wrap
+
+# Close any open modals and return the user to the main calendar
+@app.route('/back-home')
+def back_home():
+    return render_template('back-home.html')
 
 # Logout
 @app.route('/logout')
@@ -250,9 +255,8 @@ def date(year, month, day):
             year=year, month=month, selected_month_name=selected_month_name, day=day, now=now, now_month_name=now_month_name)
     else:
 
-        error = "No notes for selected date"
-        return render_template('date.html', error=error,
-            year=year, month=month, selected_month_name=selected_month_name, day=day, now=now, now_month_name=now_month_name)
+        # Render page but with no notes
+        return render_template('date.html', year=year, month=month, selected_month_name=selected_month_name, day=day, now=now, now_month_name=now_month_name)
 
 # Note form class
 class NoteForm(Form):

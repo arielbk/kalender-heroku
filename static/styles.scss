@@ -1,14 +1,18 @@
-$eerie: #191919;
-$english: #dd7975;
-$gold: #cca559;
-$creme: #ffe;
-$white: #eee;
+// $english: #dd7975;
+// $babe: #98babe;
+// $electric: #0056e2;
+
 $river: #0a3847;
-$sapphire: #1e6870;
+$gold: #cca559;
 $grey: #818181;
 $lightgrey: #c0c0c0;
-$babe: #98babe;
-$electric: #0056e2;
+$creme: #ffe;
+$white: #eee;
+$purewhite: #fff;
+$eerie: #191919;
+$deepred: #af0000;
+$sapphire: #1e6870;
+$verdant: #060;
 
 /*
 Based on Eric Meyer's CSS reset:
@@ -68,7 +72,6 @@ table {
 	border-spacing: 0;
 }
 
-
 /*----------------------------------------------------------------------------/*
 
                                               CUSTOM STYLES BEGIN ->
@@ -77,12 +80,12 @@ table {
 
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: $eerie;
+  background-color: $white;
   font-size: 16px;
   color: $eerie;
 }
 body.iframe-body {
-	background-color: $creme;
+	background-color: $white;
 	margin: 0;
 	padding: 0;
 }
@@ -93,6 +96,18 @@ body.iframe-body {
 
 ==========================================================================*/
 
+// Clearfix for today's date float
+.clearfix::after {
+	content: "";
+	clear: both;
+	display: table;
+}
+.float-right {
+	float: right;
+}
+.float-left {
+	float: left;
+}
 .main-container {
   width: 100%;
   position: absolute;
@@ -100,15 +115,15 @@ body.iframe-body {
 }
 .main-window {
   border-radius: 5px;
-  background-color: $river;
+  background-color: $white;
   min-width: 810px;
   width: 85%;
   margin: 22px auto;
-  box-shadow: 0 10px 30px #000;
+  // box-shadow: 0 10px 30px #000;
 }
 .form-box {
   border-radius: 5px;
-  background-color: $creme;
+  background-color: $purewhite;
   box-shadow: 0 10px 30px #000;
 	margin: 60px auto;
 }
@@ -128,16 +143,16 @@ body.iframe-body {
 
 h1 {
   font-size: 4em;
-  color: $river; //find me //find me
+  color: $purewhite;
 }
 h3,
 h3 a {
 	font-size: 1.7em;
-	color: $grey;
+	color: $eerie;
 	margin-top: 22px;
 }
 h3 a:hover {
-	color: $english;
+	color: $river;
 }
 strong {
 	font-weight: 600;
@@ -150,40 +165,32 @@ strong {
 ==========================================================================*/
 
 header {
-	background-color: $white;
-	height: 50px;
+	background-color: $river;
+	height: 66px;
 	width: 100%;
-}
-// Clearfix for today's date float
-header::after {
-	content: "";
-	clear: both;
-	display: table;
 }
 header h2 {
 	font-size: 2.2em;
 	font-weight: 200;
-	color: $river;
+	color: $purewhite;
 	display: inline-block;
 	float: right;
 	margin-right: 7.5%;
-	margin-top: 9px;
+	margin-top: 16px;
 }
 header a {
-	color: $river;
+	color: $purewhite;
 }
 #nav-icon {
 	display: inline-block;
 	margin-left: 7.5%;
-	margin-right: -69px;
-	margin-top: 12px;
+	margin-top: 24px;
 	padding-bottom: 22px;
 }
 nav#side-nav {
-	color: $creme;
+	color: $purewhite;
 	width: 0;
-	background: darken($eerie, 5%);
-	color: #gold;
+	background: $eerie;
 	height: 100%;
 	position: fixed;
 	z-index: 1;
@@ -195,7 +202,7 @@ nav#side-nav {
 	transition: 0.3s;
 }
 nav#side-nav a {
-	color: $creme;
+	color: $purewhite;
 	display: block;
 	margin: 0 0 44px 44px;
 	font-size: 1.3em;
@@ -215,7 +222,21 @@ nav#side-nav #nav-close {
 }
 nav#side-nav #nav-close:hover,
 nav#side-nav #nav-close:focus {
-	color: $english;
+	color: $deepred;
+}
+form#date-chooser {
+	width: auto;
+	display: inline-block;
+	margin-left: 15%;
+	transition: 0.2s;
+}
+#date-chooser input,
+#date-chooser select {
+	font-size: 1.6em;
+	background: $river;
+	color: $purewhite;
+	border-radius: 0;
+	border-color: $grey;
 }
 
 /*----------------------------------------------------------------------------/*
@@ -242,22 +263,20 @@ nav#side-nav #nav-close:focus {
 #modal-iframe {
 	width: 100%;
 	height: 100%;
-	border-radius: 5px;
 }
 
 .modal-content {
-  background-color: #f4f4f4;
+  background-color: $white;
   margin: 70px auto;
   width: 80%;
 	height: 80%;
   box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.6), 0 7px 20px 0 rgba(0, 0, 0, 0.6);
   animation-name: modal-open;
   animation-duration: 1s;
-	border-radius: 5px;
 }
 
 #btn-close {
-  color: $english;
+  color: $grey;
   font-size: 60px;
 	position: fixed;
 	top: 20px;
@@ -267,7 +286,7 @@ nav#side-nav #nav-close:focus {
 
 #btn-close:hover,
 #btn-close:focus {
-  color: #000;
+  color: $deepred;
   text-decoration: none;
   cursor: pointer;
 }
@@ -287,10 +306,10 @@ thead {
 	border-radius: 5px;
 }
 th {
-	background: $river;
+	background: $white;
 	padding: 22px;
-	color: $creme;
-	font-weight: 100;
+	color: $sapphire;
+	font-weight: 400;
 	font-size: 1.2em;
 	text-align: center;
 }
@@ -306,8 +325,7 @@ td {
 	padding: 44px;
 }
 tfoot td {
-	background: $river;
-	border-top: solid 1px $eerie;
+	background: $white;
 	padding: 22px;
 }
 tfoot tr:last-child td:first-child {
@@ -325,6 +343,9 @@ tfoot tr:last-child td:last-child {
 
 ==========================================================================*/
 
+.main-calendar table {
+	padding-bottom: 108px;
+}
 .main-calendar td {
   width: 14%;
 	text-align: center;
@@ -340,54 +361,79 @@ tfoot tr:last-child td:last-child {
 	height: 100px;
 }
 .main-calendar td a:hover {
-  background: $babe;
+  background: $sapphire;
 	text-decoration: none;
-	color: $river;
+	color: $white;
 }
 .today-highlight a {
 	background: $gold;
 	color: $eerie;
 }
 td.other-month {
-  background: $lightgrey;
-  color: $grey;
+  background: $white;
 }
-.small-titles {
+td.other-month a {
+	color: $grey;
+}
+// Setting coloured li tags -- inspired by https://www.w3.org/Style/Examples/007/color-bullets.en.html
+ul.small-titles {
 	margin-top: 10px;
-	background-color: $english;
-	border-radius: 7px;
+	list-style: none;
+	padding: 0;
 }
 .small-titles li {
-	list-style-type: square;
-	list-style-position: inside;
+	position: relative;
+	padding-left: 20px;
+	margin-bottom: 5px;
+	text-align: left;
 	font-size: 0.8em;
-	line-height: 1.5em;
-	color: $creme;
 }
-tfoot h3 {
-	color: $gold;
-	font-size: 40px;
-	font-weight: 200;
-	margin-top: 6px;
-}
-h3.month-selector-other a {
-  height: 100%;
-  color: $lightgrey;
-	font-size: 0.7em;
-	margin: 0;
-}
-.arrow {
-	color: $eerie;
-	padding: 0 12px 8px 12px;
-}
-h3.month-selector-other a:hover,
-h3.month-selector-other .arrow a:hover {
-  height: 100%;
-  color: $lightgrey;
-	background-color: $river;
-	border-bottom: 4px solid $lightgrey; //find me
+.small-titles li::before {
+	content: "▪";
+	color: $white;
+	display: inline-block;
+	font-size: 30px;
+	height: 10px;
+	position: absolute;
+	left: 0;
+	top: -10px;
 }
 
+
+// .calendar-footer {
+// 	display: block;
+// 	text-align: center;
+// 	// position: fixed;
+// 	// bottom: 0;
+// 	// left: 0;
+// 	width: 100%;
+// 	background: $white;
+// 	padding: 12px;
+// }
+// .calendar-footer h3 {
+// 	display: inline-block;
+// 	color: $gold;
+// 	font-size: 40px;
+// 	font-weight: 200;
+// 	margin: 0;
+// 	padding: 0;
+// }
+// .arrow {
+// 	color: $eerie;
+// 	padding: 0 12px 8px 12px;
+// }
+// h3.month-selector-other a {
+//   color: $eerie;
+// 	font-size: 0.7em;
+// 	margin: 0;
+// }
+// h3.month-selector-other a:hover,
+// h3.month-selector-other .arrow a:hover {
+//   color: $river;
+// 	background-color: $white;
+// 	border-bottom: 4px solid $river;
+// }
+//
 
 /*----------------------------------------------------------------------------/*
 
@@ -409,6 +455,9 @@ input {
   font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
 }
+.datenotes-form {
+	margin-top: 80px;
+}
 .form-fields {
   padding: 22px;
 }
@@ -419,16 +468,16 @@ input {
   margin-bottom: 22px;
 }
 .form-fields input {
-  background: #fff;
+  background: $purewhite;
   border: 1px solid $lightgrey;
-  box-shadow: inset 1px 2px rgba(0, 0, 0, .1);
   color: $eerie;
   padding: 6px;
   margin-top: 6px;
   width: 100%;
 }
 .form-action {
-  border-radius: 0 0 5px 5px;
+  margin-bottom: 22px;
+	float: right;
 }
 .form-action label {
   color: $creme;
@@ -438,38 +487,33 @@ input {
 .btn {
 	border: 0;
   cursor: pointer;
-	font-size: 1em;
-  font-weight: bold;
-  padding: 8px 16px;
+  font-weight: 400;
+  padding: 11px 16px;
 	color: $eerie;
+	display: inline-block;
+	text-align: center;
+	width: 120px;
+	letter-spacing: 0.05em;
+	margin: 6px;
+	border-radius: 0;
+	font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
-.btn-create,
-.form-action .btn {
-  background: $gold;
+.btn-create {
+  background: $verdant;
+	color: $purewhite;
 }
-.btn-create:hover,
-.form-action .btn:hover {
-	background: $eerie;
-	color: $creme;
-}
-.btn-delete {
-	background: $english;
+.btn-danger {
+	background: $deepred;
+	color: $purewhite;
 }
 .btn-edit {
-	background: $eerie;
-	color: $creme;
+	background: $purewhite;
+	color: $eerie;
 }
-
-.btn-select {
-	background: $eerie;
-	color: $gold;
-}
-form select {
-	font-size: 1.5em;
-	background: $eerie;
-	color: $creme;
-	border-radius: 0;
-	border-color: $grey;
+.btn:hover,
+.btn:focus {
+	background-color: $eerie;
+	color: $purewhite;
 }
 
 
@@ -479,26 +523,19 @@ form select {
 
 ==========================================================================*/
 
+.modal-header {
+	color: $sapphire;
+}
 h2.datenote-date {
-	color: $gold;
+	color: $white;
 	display: inline-block;
-	font-weight: 400;
+	font-weight: 200;
 	font-size: 1.8em;
 }
-.datenote-head th {
-	border-radius: 0;
-}
-tr.col-filler {
-	height: 80px;
-}
 .datenote-table {
-	margin: 0;
+	margin: 80px 0 36px 0;
 	padding: 0;
 	height: 100%;
-	padding-bottom: 80px;
-}
-.datenote-title {
-	text-align: left;
 }
 .datenote-description {
 	text-align: left;
@@ -507,29 +544,29 @@ tr.col-filler {
 	text-align: right;
 	padding: 22px;
 }
-
-
-
-
-.modal-footer {
+.datenote-table tr {
+	background-color: $white;
+	border-bottom: 2px solid $lightgrey;
+}
+.datenote-table tr:last-child {
+	border-bottom: 0;
+}
+.modal-header {
 	position: fixed;
 	width: 100%;
 	height: 80px;
 	background: $river;
-	bottom: 0;
+	top: 0;
 	left: 0;
 	padding: 22px;
-	border-top: solid 1px #191919;
+	border-top: solid 1px $eerie;
 	border-radius: 0;
 	z-index: 1;
 }
-
-.edit-form {
-	margin-bottom: 80px;
-}
-
-.btn-footer {
-	float: right;
+.notes-error {
+	font-weight: 600;
+	font-size: 1.2em;
+	color: $deepred;
 }
 
 
@@ -540,18 +577,19 @@ tr.col-filler {
 ==========================================================================*/
 
 .alert {
-	height: 120px;
+	height: 36px;
 	padding: 12px;
 	text-align: center;
 	font-weight: 600;
 	width: 100%;
-	position: absolute;
+	position: fixed;
 	bottom: 0;
 	z-index: 0.9;
+	color: $purewhite;
 }
 .alert-danger {
-	background: $english;
+	background: rgba($deepred, 0.9);
 }
 .alert-success {
-	background: #8eff8e;
+	background: rgba($verdant, 0.9);
 }

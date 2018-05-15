@@ -2,34 +2,37 @@
 
 {% block body %}
 
+<div class="modal-header">
+  <h2 class="datenote-date">{{day}}{% if day == 1 or day == 21 or day == 31 %}st{% elif day == 2 or day == 22 %}nd{% elif day == 3 or day == 23 %}rd{% else %}th{% endif %} {{selected_month_name}} {{year}}</h2>
+  Notes
+</div>
+
 <table class="datenote-table">
-  <thead class="datenote-head">
-    <th class="datenote-title" scope="col">
-      Title / time
-    </th>
-    <th class="datenote-description">Description</th>
-    <th class="datenote-options">Options</th>
-  </thead>
   <tbody>
+    {% if not notes %}
+      <tr>
+        <td class="notes-error">
+          No saved notes for selected date
+        </td>
+      </tr>
+    {% endif %}
     {% for note in notes %}
       <tr>
         <td class="datenote-title"><strong>{{ note.title }}</strong></td>
         <td class="datenote-body">{{ note.body|safe }}</td>
         <td class="datenote-options">
           <a class="btn btn-edit" href="edit-note_{{ note.id }}">Edit</a>
-          <a class="btn btn-delete" href="delete-note_{{ note.id }}">Delete</a>
+          <a class="btn btn-danger" href="delete-note_{{ note.id }}">Delete</a>
         </td>
       </tr>
     {% endfor %}
-      <tr class="col-filler">
-        <td colspan="3">
-      </tr>
+    <tr>
+      <td colspan="2"></td>
+      <td class="datenote-options">
+        <a class="btn btn-create" href="create-note_{{ year }}-{{ month }}-{{ day }}">Create Note</a>
+      </td>
+    </tr>
   </tbody>
 </table>
-
-<div class="modal-footer">
-  <h2 class="datenote-date">{{day}} {{selected_month_name}} {{year}}</h2>
-  <a class="btn btn-create btn-footer" href="create-note_{{ year }}-{{ month }}-{{ day }}">Create a New Note</a>
-</div>
 
 {% endblock %}

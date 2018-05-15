@@ -22,6 +22,16 @@ Carter Page's tutorial for shifting a project from the CS50 IDE and deploying to
 
 I followed a video by [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA) which outlined creating a basic Flask app from scratch, and it was really helpful to get a grasp of many of the concepts. Most of the plugins I use in the app are directly from this short series, which were really helpful and insightful to follow along with before I dove into this project (which seemed daunting to me to begin with!). I have since watched a couple of other videos from him and they are really helpful and accessible for someone starting out in web development.
 
+## What else do I want to add?
+
+- I want to make each calendar note entry have an option in which the user can 'check' it as completed for a sense of accomplishment.
+- I would like the user to be able to colour code particular notes.
+- I would like the user to be able to set a time for a note, and for notes to be arranged according to the time.
+
+All of these extensions should be optional for the user, i.e. they can choose not to apply them to some or all of their notes.
+
+And, most importantly, I will be making this more responsive for smaller screens.
+
 ## Demonstration
 
 Deployed on Heroku at: https://kalender-deploy.herokuapp.com/
