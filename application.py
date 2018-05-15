@@ -201,7 +201,7 @@ def login():
                 session['username'] = username
 
                 flash('You are now logged in', 'success')
-                return redirect(url_for('home'))
+                return redirect(url_for('back_home'))
             else:
 
                 # Did not pass
@@ -225,6 +225,11 @@ def login_required(f):
             flash('You must be logged in to access this page.', 'danger')
             return redirect(url_for('login'))
     return wrap
+
+# Close any open modals and return the user to the main calendar
+@app.route('/back-home')
+def back_home():
+    return render_template('back-home.html')
 
 # Logout
 @app.route('/logout')
