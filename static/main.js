@@ -5,12 +5,10 @@ var dateChooser = document.getElementById('date-chooser');
 
 function openMenu() {
   sideNav.style.width = '320px';
-  dateChooser.style.marginLeft = '25%';
 }
 
 function closeMenu() {
   sideNav.style.width = '0';
-  dateChooser.style.marginLeft = '15%';
 }
 
 window.addEventListener('click', outsideClick);
@@ -20,17 +18,23 @@ var modalWindow = document.getElementById('modal-window');
 var modaliFrame = document.getElementById('modal-iframe');
 var closeButton = document.getElementById('btn-close');
 
-closeButton.addEventListener('click', closeDate);
+closeButton.addEventListener('click', closeModal);
 
 window.addEventListener('click', outsideClick);
 
-function openDate(year, month, day) {
+function openModalDate(year, month, day) {
   // set blank modal display; set src of iframe so that it loads...
   modaliFrame.src = '/' + year + '-' + month + '-' + day;
   modalWindow.style.display = 'block';
 }
 
-function closeDate() {
+function openModalOther(page) {
+  // open modal for the login page
+  modaliFrame.src = '/' + page;
+  modalWindow.style.display = 'block';
+}
+
+function closeModal() {
   parent.location.reload();
 }
 

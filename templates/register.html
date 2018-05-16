@@ -1,11 +1,15 @@
 {% extends 'modal-layout.html' %}
 
 {% block body %}
-  <h3>Register</h3>
+
+<div class="modal-header">
+  <h2>Register</h2>
+  Already have an account? <a href="/login">Login</a>
+</div>
 
   {% from "includes/_formhelpers.html" import render_field %}
 
-  <section class="form-box form-box-small">
+  <section class="modal-wrapper">
     <form action="" method="POST">
       <fieldset class="form-fields">
         <label for="username">
@@ -22,7 +26,7 @@
         </label>
       </fieldset>
       <fieldset class="form-action">
-        <input class="btn" type="submit" name="submit" value="Register">
+        <input class="btn btn-create" type="submit" name="submit" value="Register">
       </fieldset>
     </form>
   </section>

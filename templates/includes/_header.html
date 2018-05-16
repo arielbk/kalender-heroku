@@ -25,12 +25,12 @@
     <div id="nav-close" onClick="closeMenu()">&times;</div>
 
     <a href="/">Home</a>
-    <a href="about">About</a>
+    <a onclick="openModalOther('about')" href="#">About</a>
     {% if session.logged_in %}
-      <a class="nav-item nav-link" href="logout">Logout</a>
+      <a onclick="openModalOther('logout')" href="#">Logout</a>
     {% else %}
-      <a class="nav-item nav-link" href="register">Register</a>
-      <a class="nav-item nav-link" href="login">Login</a>
+      <a onclick="openModalOther('register')" href="#">Register</a>
+      <a onclick="openModalOther('login')" href="#">Login</a>
     {% endif %}
 
   </nav>

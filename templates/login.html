@@ -2,7 +2,11 @@
 
 {% block body %}
 
-  <section class="form-box form-box-small">
+<div class="modal-header">
+  <h2>Login</h2>
+  Don't have an account? <a href="/register">Register</a>
+</div>
+<section class="modal-wrapper">
     <form action="/login" method="POST">
       <fieldset class="form-fields">
       <label for="username">
@@ -15,12 +19,8 @@
       </label>
       </fieldset>
       <fieldset class="form-action">
-        <input class="btn" type="submit" name="submit" value="Login">
-        <label for="remember">
-          <input type="checkbox" name="remember"> Stay signed in
-        </label>
+        <input class="btn btn-create" type="submit" name="submit" value="Login">
       </fieldset>
     </form>
-  </section>
-
+</section>
 {% endblock %}

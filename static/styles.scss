@@ -269,6 +269,32 @@ nav#side-nav #nav-close:focus {
   text-decoration: none;
   cursor: pointer;
 }
+.modal-header {
+	position: fixed;
+	width: 100%;
+	height: 80px;
+	background: rgba($river, 0.9);
+	top: 0;
+	left: 0;
+	padding: 22px;
+	border-top: solid 1px $eerie;
+	border-radius: 0;
+	z-index: 1;
+	color: $sapphire;
+}
+.modal-header a {
+	color: $sapphire;
+	text-decoration: underline;
+}
+.modal-header h2 {
+	color: $white;
+	display: inline-block;
+	font-weight: 200;
+	font-size: 1.8em;
+}
+.modal-wrapper {
+	margin: 80px 0 36px 0;
+}
 
 /*----------------------------------------------------------------------------/*
 
@@ -423,8 +449,8 @@ form#date-chooser {
 #date-chooser input,
 #date-chooser select {
 	font-size: 1.6em;
-	background: $sapphire;
-	color: $purewhite;
+	background: $purewhite;
+	color: $eerie;
 	border-radius: 0;
 	border-color: $grey;
 	margin-top: 37px;
@@ -451,9 +477,6 @@ input {
   font: 14px/1.4 "Helvetica Neue", Helvetica, Arial, sans-serif;
   margin: 0;
 }
-.datenotes-form {
-	margin-top: 80px;
-}
 .form-fields {
   padding: 22px;
 }
@@ -472,6 +495,7 @@ input {
   width: 100%;
 }
 .form-action {
+	padding: 22px;
   margin-bottom: 22px;
 	float: right;
 }
@@ -519,20 +543,11 @@ input {
 
 ==========================================================================*/
 
-.modal-header {
-	color: $sapphire;
-}
-h2.datenote-date {
-	color: $white;
-	display: inline-block;
-	font-weight: 200;
-	font-size: 1.8em;
-}
-.datenote-table {
-	margin: 80px 0 36px 0;
-	padding: 0;
-	height: 100%;
-}
+// .datenote-table {
+// 	margin: 80px 0 36px 0;
+// 	padding: 0;
+// 	height: 100%;
+// }
 .datenote-description {
 	text-align: left;
 }
@@ -546,18 +561,6 @@ h2.datenote-date {
 }
 .datenote-table tr:last-child {
 	border-bottom: 0;
-}
-.modal-header {
-	position: fixed;
-	width: 100%;
-	height: 80px;
-	background: $river;
-	top: 0;
-	left: 0;
-	padding: 22px;
-	border-top: solid 1px $eerie;
-	border-radius: 0;
-	z-index: 1;
 }
 .notes-error {
 	font-weight: 600;
@@ -584,8 +587,12 @@ h2.datenote-date {
 	color: $purewhite;
 }
 .alert-danger {
-	background: rgba($deepred, 0.9);
+	background: rgba($deepred, 0.8);
 }
 .alert-success {
-	background: rgba($verdant, 0.9);
+	background: rgba($verdant, 0.8);
+}
+.text-warning {
+	color: $deepred;
+	font-weight: 400;
 }

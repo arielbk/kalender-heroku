@@ -8,8 +8,8 @@
   </div>
 
   {% from "includes/_formhelpers.html" import render_field %}
-
-    <form action="" method="POST" class="datenotes-form">
+<section class="modal-wrapper">
+    <form action="" method="POST">
       <fieldset class="form-fields">
         <label for="title">
           {{ render_field(form.title, class_="form-conrol") }}
@@ -25,7 +25,7 @@
       </fieldset>
 
     </form>
-
+</section>
   <script src="https://cdn.ckeditor.com/ckeditor5/1.0.0-beta.3/classic/ckeditor.js"></script>
   <script type="text/javascript">
     ClassicEditor

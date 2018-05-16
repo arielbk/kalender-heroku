@@ -3,15 +3,15 @@
 {% block body %}
 
 <div class="modal-header">
-  <h2 class="datenote-date">{{day}}{% if day == 1 or day == 21 or day == 31 %}st{% elif day == 2 or day == 22 %}nd{% elif day == 3 or day == 23 %}rd{% else %}th{% endif %} {{selected_month_name}} {{year}}</h2>
+  <h2>{{day}}{% if day == 1 or day == 21 or day == 31 %}st{% elif day == 2 or day == 22 %}nd{% elif day == 3 or day == 23 %}rd{% else %}th{% endif %} {{selected_month_name}} {{year}}</h2>
   Notes
 </div>
-
+<section class="modal-wrapper">
 <table class="datenote-table">
   <tbody>
     {% if not notes %}
       <tr>
-        <td class="notes-error">
+        <td class="notes-error" colspan="3">
           No saved notes for selected date
         </td>
       </tr>
@@ -34,5 +34,6 @@
     </tr>
   </tbody>
 </table>
+</section>
 
 {% endblock %}
