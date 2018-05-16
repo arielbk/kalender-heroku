@@ -201,7 +201,7 @@ def login():
                 session['username'] = username
 
                 flash('You are now logged in', 'success')
-                return redirect(url_for('back_home'))
+                return render_template('back-home.html')
             else:
 
                 # Did not pass

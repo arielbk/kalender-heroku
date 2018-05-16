@@ -165,6 +165,7 @@ strong {
 ==========================================================================*/
 header {
   background-color: #0a3847;
+  border-bottom: 1px solid #1e6870;
   height: 66px;
   width: 100%;
 }

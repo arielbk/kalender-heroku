@@ -27,7 +27,7 @@
     <a href="/">Home</a>
     <a onclick="openModalOther('about')" href="#">About</a>
     {% if session.logged_in %}
-      <a onclick="openModalOther('logout')" href="#">Logout</a>
+      <a href="logout">Logout</a>
     {% else %}
       <a onclick="openModalOther('register')" href="#">Register</a>
       <a onclick="openModalOther('login')" href="#">Login</a>
