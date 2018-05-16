@@ -72,7 +72,7 @@ table {
 ==========================================================================*/
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: #eee;
+  background-color: #999;
   font-size: 16px;
   color: #191919;
 }
@@ -114,6 +114,7 @@ body.iframe-body {
   min-width: 810px;
   width: 85%;
   margin: 22px auto;
+  box-shadow: 0 10px 30px gray;
 }
 
 .form-box {
@@ -231,22 +232,6 @@ nav#side-nav #nav-close:focus {
   color: #af0000;
 }
 
-form#date-chooser {
-  width: auto;
-  display: inline-block;
-  margin-left: 15%;
-  transition: 0.2s;
-}
-
-#date-chooser input,
-#date-chooser select {
-  font-size: 1.6em;
-  background: #0a3847;
-  color: #fff;
-  border-radius: 0;
-  border-color: #818181;
-}
-
 /*----------------------------------------------------------------------------/*
 
                                               MODAL STYLES ->
@@ -283,7 +268,7 @@ form#date-chooser {
 }
 
 #btn-close {
-  color: #818181;
+  color: #999;
   font-size: 60px;
   position: fixed;
   top: 20px;
@@ -309,6 +294,7 @@ table {
 
 thead {
   border-radius: 5px;
+  border-bottom: 1px solid #0a3847;
 }
 
 th {
@@ -332,21 +318,6 @@ td {
   background: #ffe;
   color: #191919;
   padding: 44px;
-}
-
-tfoot td {
-  background: #eee;
-  padding: 22px;
-}
-
-tfoot tr:last-child td:first-child {
-  text-align: left;
-  border-radius: 0 0 0 5px;
-}
-
-tfoot tr:last-child td:last-child {
-  text-align: right;
-  border-radius: 0 0 5px 0;
 }
 
 /*----------------------------------------------------------------------------/*
@@ -390,7 +361,7 @@ td.other-month {
 }
 
 td.other-month a {
-  color: #818181;
+  color: #999;
 }
 
 ul.small-titles {
@@ -416,6 +387,82 @@ ul.small-titles {
   position: absolute;
   left: 0;
   top: -10px;
+}
+
+tfoot {
+  border-top: 1px solid #0a3847;
+}
+
+.main-calendar tfoot td {
+  background: #eee;
+  padding: 0;
+  height: 36px;
+}
+
+tfoot tr:last-child td:first-child {
+  text-align: left;
+  border-radius: 0 0 0 5px;
+}
+
+tfoot tr:last-child td:last-child {
+  text-align: right;
+  border-radius: 0 0 5px 0;
+}
+
+.calendar-footer {
+  display: block;
+  text-align: center;
+  width: 100%;
+  background: #eee;
+  padding: 12px;
+}
+
+.calendar-footer h3 {
+  display: inline-block;
+  color: #cca559;
+  font-size: 40px;
+  font-weight: 200;
+  margin: 0;
+  padding: 0;
+}
+
+.arrow {
+  color: #191919;
+  padding: 0 12px 8px 12px;
+}
+
+h3.month-selector-other a {
+  color: #191919;
+  font-size: 0.7em;
+  margin: 0;
+}
+
+tfoot td {
+  vertical-align: top;
+}
+
+tfoot td:first-child a:hover,
+tfoot td:last-child a:hover {
+  background: #eee;
+  border-bottom: 4px solid #1e6870;
+}
+
+form#date-chooser {
+  position: relative;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  display: inline-block;
+}
+
+#date-chooser input,
+#date-chooser select {
+  font-size: 1.6em;
+  background: #1e6870;
+  color: #fff;
+  border-radius: 0;
+  border-color: #999;
+  margin-top: 37px;
 }
 
 /*----------------------------------------------------------------------------/*

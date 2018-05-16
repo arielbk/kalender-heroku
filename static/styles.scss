@@ -4,7 +4,7 @@
 
 $river: #0a3847;
 $gold: #cca559;
-$grey: #818181;
+$grey: #999;
 $lightgrey: #c0c0c0;
 $creme: #ffe;
 $white: #eee;
@@ -80,7 +80,7 @@ table {
 
 body {
   font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: $white;
+  background-color: $grey;
   font-size: 16px;
   color: $eerie;
 }
@@ -119,7 +119,7 @@ body.iframe-body {
   min-width: 810px;
   width: 85%;
   margin: 22px auto;
-  // box-shadow: 0 10px 30px #000;
+  box-shadow: 0 10px 30px darken($grey, 10%);
 }
 .form-box {
   border-radius: 5px;
@@ -224,27 +224,12 @@ nav#side-nav #nav-close:hover,
 nav#side-nav #nav-close:focus {
 	color: $deepred;
 }
-form#date-chooser {
-	width: auto;
-	display: inline-block;
-	margin-left: 15%;
-	transition: 0.2s;
-}
-#date-chooser input,
-#date-chooser select {
-	font-size: 1.6em;
-	background: $river;
-	color: $purewhite;
-	border-radius: 0;
-	border-color: $grey;
-}
 
 /*----------------------------------------------------------------------------/*
 
                                               MODAL STYLES ->
 
 ==========================================================================*/
-
 .modal {
 	position:fixed;
   z-index: 1;
@@ -255,16 +240,13 @@ form#date-chooser {
   background-color: rgba(0, 0, 0, 0.7);
 	overflow: visible;
 }
-
 #modal-window {
 	display: none;
 }
-
 #modal-iframe {
 	width: 100%;
 	height: 100%;
 }
-
 .modal-content {
   background-color: $white;
   margin: 70px auto;
@@ -274,23 +256,19 @@ form#date-chooser {
   animation-name: modal-open;
   animation-duration: 1s;
 }
-
 #btn-close {
   color: $grey;
   font-size: 60px;
 	position: fixed;
 	top: 20px;
 	right: 7.5%;
-
 }
-
 #btn-close:hover,
 #btn-close:focus {
   color: $deepred;
   text-decoration: none;
   cursor: pointer;
 }
-
 
 /*----------------------------------------------------------------------------/*
 
@@ -304,6 +282,7 @@ table {
 }
 thead {
 	border-radius: 5px;
+	border-bottom: 1px solid $river;
 }
 th {
 	background: $white;
@@ -323,18 +302,6 @@ td {
 	background: $creme;
 	color: $eerie;
 	padding: 44px;
-}
-tfoot td {
-	background: $white;
-	padding: 22px;
-}
-tfoot tr:last-child td:first-child {
-	text-align: left;
-  border-radius: 0 0 0 5px;
-}
-tfoot tr:last-child td:last-child {
-	text-align: right;
-  border-radius: 0 0 5px 0;
 }
 
 /*----------------------------------------------------------------------------/*
@@ -398,42 +365,71 @@ ul.small-titles {
 	left: 0;
 	top: -10px;
 }
+tfoot {
+	border-top: 1px solid $river;
+}
+.main-calendar tfoot td {
+	background: $white;
+	padding: 0;
+	height: 36px;
+}
+tfoot tr:last-child td:first-child {
+	text-align: left;
+  border-radius: 0 0 0 5px;
+}
+tfoot tr:last-child td:last-child {
+	text-align: right;
+  border-radius: 0 0 5px 0;
+}
+.calendar-footer {
+	display: block;
+	text-align: center;
+	width: 100%;
+	background: $white;
+	padding: 12px;
+}
+.calendar-footer h3 {
+	display: inline-block;
+	color: $gold;
+	font-size: 40px;
+	font-weight: 200;
+	margin: 0;
+	padding: 0;
+}
+.arrow {
+	color: $eerie;
+	padding: 0 12px 8px 12px;
+}
+h3.month-selector-other a {
+  color: $eerie;
+	font-size: 0.7em;
+	margin: 0;
+}
+tfoot td {
+	vertical-align: top;
+}
+tfoot td:first-child a:hover,
+tfoot td:last-child a:hover {
+	background: $white;
+	border-bottom: 4px solid $sapphire;
+}
+form#date-chooser {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	width: auto;
+	display: inline-block;
+}
+#date-chooser input,
+#date-chooser select {
+	font-size: 1.6em;
+	background: $sapphire;
+	color: $purewhite;
+	border-radius: 0;
+	border-color: $grey;
+	margin-top: 37px;
+}
 
-
-// .calendar-footer {
-// 	display: block;
-// 	text-align: center;
-// 	// position: fixed;
-// 	// bottom: 0;
-// 	// left: 0;
-// 	width: 100%;
-// 	background: $white;
-// 	padding: 12px;
-// }
-// .calendar-footer h3 {
-// 	display: inline-block;
-// 	color: $gold;
-// 	font-size: 40px;
-// 	font-weight: 200;
-// 	margin: 0;
-// 	padding: 0;
-// }
-// .arrow {
-// 	color: $eerie;
-// 	padding: 0 12px 8px 12px;
-// }
-// h3.month-selector-other a {
-//   color: $eerie;
-// 	font-size: 0.7em;
-// 	margin: 0;
-// }
-// h3.month-selector-other a:hover,
-// h3.month-selector-other .arrow a:hover {
-//   color: $river;
-// 	background-color: $white;
-// 	border-bottom: 4px solid $river;
-// }
-//
 
 /*----------------------------------------------------------------------------/*
 
