@@ -111,9 +111,8 @@ body.iframe-body {
 .main-window {
   border-radius: 5px;
   background-color: #efefee;
-  min-width: 810px;
   width: 85%;
-  margin: 22px auto;
+  margin: 5% auto;
   box-shadow: 0 10px 30px gray;
 }
 
@@ -130,9 +129,22 @@ body.iframe-body {
 
 .form-box-large {
   width: 85%;
-  min-width: 810px;
 }
 
+@media (max-width: 1100px) {
+  .main-window {
+    width: 95%;
+  }
+}
+@media (max-width: 750px) {
+  body {
+    font-size: 14px;
+  }
+
+  .main-window {
+    width: 100%;
+  }
+}
 /*----------------------------------------------------------------------------/*
 
                                               TYPOGRAPHY ->
@@ -164,7 +176,7 @@ strong {
 
 ==========================================================================*/
 #menu-expander {
-  background-color: rgba(10, 56, 71, 0.9);
+  background-color: rgba(30, 104, 112, 0.9);
   height: 60px;
   width: 60px;
   left: 12px;
@@ -486,7 +498,7 @@ tfoot tr:last-child td:last-child {
 
 a h3.month-selector-other {
   color: #0a3847;
-  font-size: 2em;
+  font-size: 1.8em;
   margin: 0;
 }
 
@@ -515,6 +527,15 @@ form#date-chooser {
   margin-top: 17px;
 }
 
+@media (max-width: 650px) {
+  .main-calendar td a {
+    color: #191919;
+    padding: 8px 4px;
+    display: block;
+    width: 100%;
+    height: 80px;
+  }
+}
 /*----------------------------------------------------------------------------/*
 
                                               FORMS ->
