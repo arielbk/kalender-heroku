@@ -4,14 +4,14 @@ var sideNav = document.getElementById('side-nav');
 var menuExpander = document.getElementById('menu-expander');
 
 function toggleMenu() {
-  if (sideNav.style.width === '320px') {
-    sideNav.style.width = '0';
+  if (sideNav.style.left == '-220px') {
+    sideNav.style.left = '0';
+    menuExpander.style.left = '232px';
+    menuExpander.style.backgroundColor = 'rgba(204,165,89,0.9)';
+  } else {
+    sideNav.style.left = '-220px';
     menuExpander.style.left = '12px';
     menuExpander.style.removeProperty('background-color');
-  } else {
-    sideNav.style.width = '320px';
-    menuExpander.style.left = '332px';
-    menuExpander.style.backgroundColor = 'rgba(204,165,89,0.9)';
   }
 }
 

@@ -216,13 +216,13 @@ header a {
 
 nav#side-nav {
   color: #fff;
-  width: 0;
+  width: 220px;
   background: #191919;
   height: 100%;
   position: fixed;
   z-index: 2;
   top: 0;
-  left: 0;
+  left: -220px;
   opacity: 0.95;
   overflow-x: hidden;
   padding-top: 88px;
