@@ -1,24 +1,23 @@
 // Scripts for slide out menu
 
 var sideNav = document.getElementById('side-nav');
-var dateChooser = document.getElementById('date-chooser');
+var menuExpander = document.getElementById('menu-expander');
 
-function openMenu() {
-  sideNav.style.width = '320px';
+function toggleMenu() {
+  if (sideNav.style.width === '320px') {
+    sideNav.style.width = '0';
+    menuExpander.style.left = '12px';
+    menuExpander.style.removeProperty('background-color');
+  } else {
+    sideNav.style.width = '320px';
+    menuExpander.style.left = '332px';
+    menuExpander.style.backgroundColor = 'rgba(204,165,89,0.9)';
+  }
 }
-
-function closeMenu() {
-  sideNav.style.width = '0';
-}
-
-window.addEventListener('click', outsideClick);
 
 // Scripts for modal iframe windows
 var modalWindow = document.getElementById('modal-window');
 var modaliFrame = document.getElementById('modal-iframe');
-var closeButton = document.getElementById('btn-close');
-
-closeButton.addEventListener('click', closeModal);
 
 window.addEventListener('click', outsideClick);
 

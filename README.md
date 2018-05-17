@@ -10,10 +10,6 @@ It is my first full-stack web app. I chose a project like this because it is cha
 
 I am doing this project for [Harvard's CS50x online course on EdX](https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x). In the second to last week of the course we worked on a flask-based web app called CS50 finance, and that gave me some practice with using Python and Flask specifically.
 
-## Why 'Kalender'?
-
-Kalender is the German word for 'calendar'. It was my placeholder name for the project and it stuck.
-
 ## Who to thank
 
 CS50 has been the best online course I have taken. It introduced me to programming and computer science principles and really introduced me to this world. This project is my final one for CS50.

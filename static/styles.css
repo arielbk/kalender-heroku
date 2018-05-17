@@ -78,7 +78,7 @@ body {
 }
 
 body.iframe-body {
-  background-color: #eee;
+  background-color: #efefee;
   margin: 0;
   padding: 0;
 }
@@ -110,7 +110,7 @@ body.iframe-body {
 
 .main-window {
   border-radius: 5px;
-  background-color: #eee;
+  background-color: #efefee;
   min-width: 810px;
   width: 85%;
   margin: 22px auto;
@@ -163,11 +163,22 @@ strong {
                                               HEADER ->
 
 ==========================================================================*/
-header {
-  background-color: #0a3847;
-  border-bottom: 1px solid #1e6870;
-  height: 66px;
-  width: 100%;
+#menu-expander {
+  background-color: rgba(10, 56, 71, 0.9);
+  height: 60px;
+  width: 60px;
+  left: 12px;
+  top: 12px;
+  padding-left: 7px;
+  border-radius: 5px;
+  position: fixed;
+  z-index: 3;
+  transition: 0.3s;
+}
+
+#menu-expander:hover {
+  cursor: pointer;
+  background-color: #cca559;
 }
 
 header h2 {
@@ -197,7 +208,7 @@ nav#side-nav {
   background: #191919;
   height: 100%;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   top: 0;
   left: 0;
   opacity: 0.95;
@@ -259,7 +270,7 @@ nav#side-nav #nav-close:focus {
 }
 
 .modal-content {
-  background-color: #eee;
+  background-color: #efefee;
   margin: 70px auto;
   width: 80%;
   height: 80%;
@@ -303,7 +314,7 @@ nav#side-nav #nav-close:focus {
 }
 
 .modal-header h2 {
-  color: #eee;
+  color: #efefee;
   display: inline-block;
   font-weight: 200;
   font-size: 1.8em;
@@ -325,13 +336,12 @@ table {
 
 thead {
   border-radius: 5px;
-  border-bottom: 1px solid #0a3847;
 }
 
 th {
-  background: #eee;
+  background: #0a3847;
   padding: 22px;
-  color: #1e6870;
+  color: #efefee;
   font-weight: 400;
   font-size: 1.2em;
   text-align: center;
@@ -379,7 +389,7 @@ td {
 .main-calendar td a:hover {
   background: #1e6870;
   text-decoration: none;
-  color: #eee;
+  color: #efefee;
 }
 
 .today-highlight a {
@@ -388,7 +398,7 @@ td {
 }
 
 td.other-month {
-  background: #eee;
+  background: #efefee;
 }
 
 td.other-month a {
@@ -411,7 +421,7 @@ ul.small-titles {
 
 .small-titles li::before {
   content: "▪";
-  color: #eee;
+  color: #efefee;
   display: inline-block;
   font-size: 30px;
   height: 10px;
@@ -425,9 +435,13 @@ tfoot {
 }
 
 .main-calendar tfoot td {
-  background: #eee;
+  background: #efefee;
   padding: 0;
-  height: 36px;
+  height: 75px;
+  vertical-align: top;
+}
+.main-calendar tfoot td a {
+  height: 75px;
 }
 
 tfoot tr:last-child td:first-child {
@@ -444,7 +458,7 @@ tfoot tr:last-child td:last-child {
   display: block;
   text-align: center;
   width: 100%;
-  background: #eee;
+  background: #1e6870;
   padding: 12px;
 }
 
@@ -462,19 +476,15 @@ tfoot tr:last-child td:last-child {
   padding: 0 12px 8px 12px;
 }
 
-h3.month-selector-other a {
-  color: #191919;
-  font-size: 0.7em;
+a h3.month-selector-other {
+  color: #0a3847;
+  font-size: 2em;
   margin: 0;
-}
-
-tfoot td {
-  vertical-align: top;
 }
 
 tfoot td:first-child a:hover,
 tfoot td:last-child a:hover {
-  background: #eee;
+  background: #efefee;
   border-bottom: 4px solid #1e6870;
 }
 
@@ -493,7 +503,7 @@ form#date-chooser {
   color: #191919;
   border-radius: 0;
   border-color: #999;
-  margin-top: 37px;
+  margin-top: 17px;
 }
 
 /*----------------------------------------------------------------------------/*
@@ -601,7 +611,7 @@ input {
 }
 
 .datenote-table tr {
-  background-color: #eee;
+  background-color: #efefee;
   border-bottom: 2px solid #c0c0c0;
 }
 

@@ -7,7 +7,7 @@ $gold: #cca559;
 $grey: #999;
 $lightgrey: #c0c0c0;
 $creme: #ffe;
-$white: #eee;
+$white: #efefee;
 $purewhite: #fff;
 $eerie: #191919;
 $deepred: #af0000;
@@ -164,11 +164,21 @@ strong {
 
 ==========================================================================*/
 
-header {
-	background-color: $river;
-	border-bottom: 1px solid $sapphire;
-	height: 66px;
-	width: 100%;
+#menu-expander {
+	background-color: rgba($river, 0.9);
+	height: 60px;
+	width: 60px;
+	left: 12px;
+	top: 12px;
+	padding-left: 7px;
+	border-radius: 5px;
+	position: fixed;
+	z-index: 3;
+	transition: 0.3s;
+}
+#menu-expander:hover {
+	cursor: pointer;
+	background-color: $gold;
 }
 header h2 {
 	font-size: 2.2em;
@@ -194,7 +204,7 @@ nav#side-nav {
 	background: $eerie;
 	height: 100%;
 	position: fixed;
-	z-index: 1;
+	z-index: 2;
 	top: 0;
 	left: 0;
 	opacity: 0.95;
@@ -309,12 +319,12 @@ table {
 }
 thead {
 	border-radius: 5px;
-	border-bottom: 1px solid $river;
+	// border-bottom: 1px solid $river;
 }
 th {
-	background: $white;
+	background: $river;
 	padding: 22px;
-	color: $sapphire;
+	color: $white;
 	font-weight: 400;
 	font-size: 1.2em;
 	text-align: center;
@@ -398,7 +408,11 @@ tfoot {
 .main-calendar tfoot td {
 	background: $white;
 	padding: 0;
-	height: 36px;
+	height: 75px;
+	vertical-align: top;
+	a {
+		height: 75px;
+	}
 }
 tfoot tr:last-child td:first-child {
 	text-align: left;
@@ -412,7 +426,7 @@ tfoot tr:last-child td:last-child {
 	display: block;
 	text-align: center;
 	width: 100%;
-	background: $white;
+	background: $sapphire;
 	padding: 12px;
 }
 .calendar-footer h3 {
@@ -427,13 +441,10 @@ tfoot tr:last-child td:last-child {
 	color: $eerie;
 	padding: 0 12px 8px 12px;
 }
-h3.month-selector-other a {
-  color: $eerie;
-	font-size: 0.7em;
+a h3.month-selector-other {
+  color: $river;
+	font-size: 2em;
 	margin: 0;
-}
-tfoot td {
-	vertical-align: top;
 }
 tfoot td:first-child a:hover,
 tfoot td:last-child a:hover {
@@ -454,7 +465,7 @@ form#date-chooser {
 	color: $eerie;
 	border-radius: 0;
 	border-color: $grey;
-	margin-top: 37px;
+	margin-top: 17px;
 }
 
 
