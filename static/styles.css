@@ -244,6 +244,14 @@ nav#side-nav #nav-close:focus {
   color: #af0000;
 }
 
+nav p {
+  padding: 0 44px 44px 44px;
+  margin-bottom: 44px;
+  color: #cca559;
+  line-height: 1.6em;
+  border-bottom: 2px solid #c0c0c0;
+}
+
 /*----------------------------------------------------------------------------/*
 
                                               MODAL STYLES ->
@@ -498,6 +506,7 @@ form#date-chooser {
 
 #date-chooser input,
 #date-chooser select {
+  z-index: 0;
   font-size: 1.6em;
   background: #fff;
   color: #191919;

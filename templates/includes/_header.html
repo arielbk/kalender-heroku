@@ -9,19 +9,24 @@
   </div>
 
 </div>
-  <!-- <h2>
-    <a href="/">
-      {{ now.day }}{% if now.day == 1 or now.day == 21 or now.day == 31 %}st{% elif now.day == 2 or now.day == 22 %}nd{% elif now.day == 3 or now.day == 23 %}rd{% else %}th{% endif %}
-      {{ now_month_name }},
-      {{ now.year }}
-    </a>
-  </h2> -->
-
-
+<!-- <h2>
+  <a href="/">
+    {{ now.day }}{% if now.day == 1 or now.day == 21 or now.day == 31 %}st{% elif now.day == 2 or now.day == 22 %}nd{% elif now.day == 3 or now.day == 23 %}rd{% else %}th{% endif %}
+    {{ now_month_name }},
+    {{ now.year }}
+  </a>
+</h2> -->
 
   <nav id="side-nav">
-
-    <!-- <div id="nav-close" onclick="closeMenu()">&times;</div> -->
+    <p>
+    {% if session.logged_in %}
+       Welcome, {{session.username}}! <br>
+    {% endif %}
+      Today is the
+      {{ now.day }}{% if now.day == 1 or now.day == 21 or now.day == 31 %}st{% elif now.day == 2 or now.day == 22 %}nd{% elif now.day == 3 or now.day == 23 %}rd{% else %}th{% endif %}
+      of {{ now_month_name }},
+      {{ now.year }}
+    </p>
 
     <a href="/">Home</a>
     <a onclick="openModalOther('about'); toggleMenu();" href="#">About</a>

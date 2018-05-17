@@ -146,7 +146,7 @@ def make_calendar(month, year):
         # Populate calendar with saved note titles
         notes = Note.query.filter_by(username=session['username'], date_month=current_month, date_year=current_year).all()
 
-    return render_template('index.html', notes=notes, now=now, now_month_name=now_month_name, month_prev=month_prev, month_next=month_next, current_month=current_month, current_year=current_year,
+    return render_template('index.html', session=session, notes=notes, now=now, now_month_name=now_month_name, month_prev=month_prev, month_next=month_next, current_month=current_month, current_year=current_year,
         cal_month=cal_month, cal_month_prev=cal_month_prev, cal_month_next=cal_month_next,
         month_name_prev=month_name_prev, month_name_current=month_name_current, month_name_next=month_name_next)
 

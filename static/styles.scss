@@ -235,6 +235,13 @@ nav#side-nav #nav-close:hover,
 nav#side-nav #nav-close:focus {
 	color: $deepred;
 }
+nav p {
+	padding: 0 44px 44px 44px;
+	margin-bottom: 44px;
+	color: $gold;
+	line-height: 1.6em;
+	border-bottom: 2px solid $lightgrey;
+}
 
 /*----------------------------------------------------------------------------/*
 
@@ -460,6 +467,7 @@ form#date-chooser {
 }
 #date-chooser input,
 #date-chooser select {
+	z-index: 0;
 	font-size: 1.6em;
 	background: $purewhite;
 	color: $eerie;
