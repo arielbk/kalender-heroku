@@ -181,7 +181,6 @@ strong {
   width: 60px;
   left: 12px;
   top: 12px;
-  padding-left: 7px;
   border-radius: 5px;
   position: fixed;
   z-index: 3;
@@ -209,8 +208,8 @@ header a {
 
 #nav-icon {
   display: inline-block;
-  margin-left: 7.5%;
-  margin-top: 24px;
+  margin-left: 15px;
+  margin-top: 15px;
   padding-bottom: 22px;
 }
 

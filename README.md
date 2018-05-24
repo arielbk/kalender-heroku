@@ -4,19 +4,30 @@
 
 Kalender is a web app built with Python, using Flask as a micro-framework.
 
-It is essentially a calendar, with the ability to log in and add notes to specific dates.
+It is a calendar, with the ability to log in and add notes to specific dates.
 
-It is my first full-stack web app. I chose a project like this because it is challenging enough to keep me interested, accessible enough for me to finish, but open to add more and more features to as I go along.
+It is my first full-stack web app. I chose a project like this because it is challenging but accessible enough for me to finish as an MVP, and also open to add more and more features to.
 
-I am doing this project for [Harvard's CS50x online course on EdX](https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x). In the second to last week of the course we worked on a flask-based web app called CS50 finance, and that gave me some practice with using Python and Flask specifically.
+This is my final project for [Harvard's CS50x online course on EdX](https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x). In the second to last week of the course we worked on a flask-based web app called CS50 Finance, and that gave me some practice with using Python and Flask specifically.
+
+## Demonstration
+
+Deployed on Heroku at: https://kalender-deploy.herokuapp.com/
+
+## What are the main source codes to check out?
+
+- [The Python application file] (https://github.com/arielbk/kalender-heroku/blob/master/application.py)
+- [The SASS CSS file](https://github.com/arielbk/kalender-heroku/blob/master/static/styles.scss)
+- [The various template files (Flask uses Jinja for templating)](https://github.com/arielbk/kalender-heroku/tree/master/templates)
+- [JavaScript helpers](https://github.com/arielbk/kalender-heroku/blob/master/static/main.js)
 
 ## Who to thank
 
-CS50 has been the best online course I have taken. It introduced me to programming and computer science principles and really introduced me to this world. This project is my final one for CS50.
+CS50 is an extremely well taught and organised course, I highly recommend it to anyone out there. It introduced me to computer science principles.
 
-Carter Page's tutorial for shifting a project from the CS50 IDE and deploying to Heroku was invaluable. After hours of searching through Flask and Heroku documentation and tutorials, his tutorial really set me on the right path with both deploying to Heroku and changing the app to PostgreSQL and SQL-Alchemy from locally running MySQL.
+[Carter Page's seminar](https://github.com/carter-page/whowashere) was invaluable after hours of searching through Flask and Heroku documentation. It set me on the right path with both deploying to Heroku and changing the app from a local MySQL connection to PostgreSQL with SQL-Alchemy.
 
-I followed a video by [Traversy Media](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA) which outlined creating a basic Flask app from scratch, and it was really helpful to get a grasp of many of the concepts. Most of the plugins I use in the app are directly from this short series, which were really helpful and insightful to follow along with before I dove into this project (which seemed daunting to me to begin with!). I have since watched a couple of other videos from him and they are really helpful and accessible for someone starting out in web development.
+[Traversy Media's video](https://www.youtube.com/channel/UC29ju8bIPH5as8OGnQzwJyA) on creating a simple Flask app was really helpful for me to get a grasp of many concepts.
 
 ## What else do I want to add?
 
@@ -26,8 +37,4 @@ I followed a video by [Traversy Media](https://www.youtube.com/channel/UC29ju8bI
 
 All of these extensions should be optional for the user, i.e. they can choose not to apply them to some or all of their notes.
 
-And, most importantly, I will be making this more responsive for smaller screens.
-
-## Demonstration
-
-Deployed on Heroku at: https://kalender-deploy.herokuapp.com/
+And, most importantly, I would like to make this more responsive for smaller screens.
