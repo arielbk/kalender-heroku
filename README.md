@@ -1,5 +1,7 @@
 # Kalender
 
+Deployed on Heroku at: https://kalender-deploy.herokuapp.com/
+
 ## What is it?
 
 Kalender is a web app built with Python, using Flask as a micro-framework.
@@ -10,13 +12,9 @@ It is my first full-stack web app. I chose a project like this because it is cha
 
 This is my final project for [Harvard's CS50x online course on EdX](https://www.edx.org/course/cs50s-introduction-computer-science-harvardx-cs50x). In the second to last week of the course we worked on a flask-based web app called CS50 Finance, and that gave me some practice with using Python and Flask specifically.
 
-## Demonstration
+## Main source codes to check out
 
-Deployed on Heroku at: https://kalender-deploy.herokuapp.com/
-
-## What are the main source codes to check out?
-
-- [The Python application file] (https://github.com/arielbk/kalender-heroku/blob/master/application.py)
+- [The Python application file](https://github.com/arielbk/kalender-heroku/blob/master/application.py)
 - [The SASS CSS file](https://github.com/arielbk/kalender-heroku/blob/master/static/styles.scss)
 - [The various template files (Flask uses Jinja for templating)](https://github.com/arielbk/kalender-heroku/tree/master/templates)
 - [JavaScript helpers](https://github.com/arielbk/kalender-heroku/blob/master/static/main.js)
